@@ -173,6 +173,10 @@ table input {
     text-align: center;
 }
 
+table input.error {
+    color: #ff0000;
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
