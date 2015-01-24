@@ -158,7 +158,29 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
+td {
+    border: 1px solid black;
+    padding: 0;
+}
+
+table input {
+    color: #1fbad6;
+    font-size: 36px;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 
 
