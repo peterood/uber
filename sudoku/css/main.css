@@ -170,10 +170,7 @@ td {
 
 table input {
     color: #1fbad6;
-    font-size: 36px;
-    height: 50px;
     text-align: center;
-    width: 50px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -197,7 +194,14 @@ input[type=number]::-webkit-outer-spin-button {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+@media only screen and (min-width: 320px) {
+    
+    table input {
+        font-size: 16px;
+        height: 15px;
+        width: 15px;
+    }
+}
 @media only screen and (min-width: 480px) {
 
 /* ====================
@@ -220,6 +224,12 @@ input[type=number]::-webkit-outer-spin-button {
         margin-right: 0;
     }
 
+    table input {
+        height: 25px;
+        font-size: 16px;
+        width: 25px;
+    }
+
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
@@ -234,6 +244,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media only screen and (min-width: 768px) {
+
+    table input {
+        font-size: 36px;
+        height: 50px;
+        width: 50px;
+    }
 
 /* ====================
     WIDE: CSS3 Effects

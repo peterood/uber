@@ -9,7 +9,7 @@ board += '<table>';
 for (var i = 0; i < rows; i++) {
 	board += '<tr>';
 	for (var j = 0; j < columns; j++) {
-		board += '<td>' + '<input type="number" inputmode="numeric"></input>' + '</td>';
+		board += '<td>' + '<input type="tel" id="' + i + j + '"></input>' + '</td>';
 	}
 	board += '</tr>';
 }
