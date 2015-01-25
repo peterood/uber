@@ -27,8 +27,10 @@ fill = function(hint) {
 
 verify = function(solution) {
 	for (key in solution) {
-		if ($(key).val() !== solution[key]) {
-			$(key).addClass('error');
+		if ($(key).val() !== '') {
+			if ($(key).val() !== solution[key]) {
+				$(key).addClass('error');
+			}
 		}
 	}
 }
@@ -70,8 +72,8 @@ hint = {
 	'#34': '6',
 	'#38': '3',
 	'#40': '4',
-	'#44': '8',
-	'#46': '3',
+	'#43': '8',
+	'#45': '3',
 	'#48': '1',
 	'#50': '7',
 	'#54': '2',
@@ -174,3 +176,6 @@ solution = {
 
 // Generate the board
 makeBoard();
+
+// Pre fill the board with hints
+fill(hint);
