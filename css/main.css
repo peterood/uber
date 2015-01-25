@@ -198,6 +198,18 @@ table {
     width: auto;
 }
 
+tbody {
+    border: 3px solid black;
+}
+
+tbody tr:nth-child(3), tbody tr:nth-child(6) {
+    border-bottom: 3px solid #000000;
+}
+
+tbody td:nth-child(3), tbody td:nth-child(6) {
+    border-right: 3px solid #000000;
+}
+
 td {
     border: 1px solid black;
     padding: 0;
