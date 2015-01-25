@@ -6,7 +6,8 @@ var board = '',
 	newGame,
 	rows = 9,
 	solution,
-	verify;
+	verify,
+	winner;
 
 // Add event listeners
 document.getElementById('newGame').addEventListener('click', function() {
@@ -26,12 +27,22 @@ fill = function(hint) {
 }
 
 verify = function(solution) {
+	winner = true;
+	$('td input').removeClass('error');
 	for (key in solution) {
 		if ($(key).val() !== '') {
 			if ($(key).val() !== solution[key]) {
 				$(key).addClass('error');
+				winner = false;
 			}
+		} else {
+			winner = false;
 		}
+	}
+
+	if (winner === true) {
+		// console.log('winner!');
+		alert("Thanks for playing! We're adding puzzles and hope you visit again. Enjoy your ride!");
 	}
 }
 
