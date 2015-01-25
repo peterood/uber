@@ -62,7 +62,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px Helvetica Neue, Helvetica, Arial;
 }
 
 .wrapper {
@@ -157,6 +157,14 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.title sub {
+   color: #1fbad6; 
+}
+
+h1 {
+    line-height: 100%;
+}
+
 a {
     color: #1fbad6;
 }
