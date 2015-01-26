@@ -5,6 +5,8 @@ var board = '',
 	makeBoard,
 	newGame,
 	rows = 9,
+	setFocus,
+	showHint,
 	solution,
 	verify,
 	winner;
@@ -19,11 +21,49 @@ document.getElementById('verify').addEventListener('click', function() {
 	verify(solution);
 })
 
+document.getElementById('hint').addEventListener('click', function() {
+	showHint();
+})
+
 // Functions
 fill = function(hint) {
 	for (key in hint) {
 		$(key).val(hint[key]);
 	}
+}
+
+makeBoard = function() {
+	$('#board').html('');
+	board += '<table>';
+
+	for (var i = 0; i < rows; i++) {
+		board += '<tr>';
+		for (var j = 0; j < columns; j++) {
+			board += '<td>' + '<input type="tel" id="' + i + j + '" onfocus="setFocus()"></input>' + '</td>';
+		}
+		board += '</tr>';
+	}
+
+	board += '</table>';
+
+	$('#board').append(board);
+}
+
+newGame = function() {
+	$('td input').val('').removeClass('error');
+}
+
+setFocus = function() {
+	if (document.querySelector('.focus')) {
+		document.querySelector('.focus').classList.remove('focus');
+	}
+	document.activeElement.classList.add('focus');
+}
+
+showHint = function() {
+	var focused = '#';
+	focused += document.querySelector('.focus').id.toString();
+	$(focused).val(solution[focused]);
 }
 
 verify = function(solution) {
@@ -44,27 +84,6 @@ verify = function(solution) {
 		// console.log('winner!');
 		alert("Thanks for playing! We're adding puzzles and hope you visit again. Enjoy your ride!");
 	}
-}
-
-makeBoard = function() {
-	$('#board').html('');
-	board += '<table>';
-
-	for (var i = 0; i < rows; i++) {
-		board += '<tr>';
-		for (var j = 0; j < columns; j++) {
-			board += '<td>' + '<input type="tel" id="' + i + j + '"></input>' + '</td>';
-		}
-		board += '</tr>';
-	}
-
-	board += '</table>';
-
-	$('#board').append(board);
-}
-
-newGame = function() {
-	$('td input').val('').removeClass('error');
 }
 
 // Objects
