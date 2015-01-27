@@ -1,0 +1,53 @@
+.title sub {
+  color: #1fbad6; }
+
+h1 {
+  line-height: 100%; }
+
+a {
+  color: #1fbad6; }
+
+.btn {
+  padding: 5px 8px;
+  border: 2px solid #1fbad6;
+  background-color: #070716;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px; }
+
+.btn-filled {
+  background-color: #1fbad6; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+#controls {
+  margin-bottom: 10px; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto; }
+  table tbody {
+    border: 3px solid #000000; }
+    table tbody tr:nth-child(3), table tbody tr:nth-child(6) {
+      border-bottom: 3px solid #000000; }
+    table tbody td:nth-child(3), table tbody td:nth-child(6) {
+      border-right: 3px solid #000000; }
+    table tbody td {
+      border: 1px solid #000000;
+      padding: 0;
+      text-align: center; }
+      table tbody td input {
+        border: 0;
+        color: #1fbad6;
+        text-align: center; }
+        table tbody td input.error {
+          color: #ff0000; }
+      table tbody td input[type=number]::-webkit-inner-spin-button,
+      table tbody td input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+
+/*# sourceMappingURL=sudoku.css.map */
