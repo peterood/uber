@@ -1,6 +1,7 @@
 var board = '',
 	columns = 9,
 	fill,
+	focused,
 	hint,
 	makeBoard,
 	newGame,
@@ -61,7 +62,7 @@ setFocus = function() {
 }
 
 showHint = function() {
-	var focused = '';
+	focused = '';
 	focused += document.querySelector('.focus').id.toString();
 	$(focused).val(solution[focused]);
 }
